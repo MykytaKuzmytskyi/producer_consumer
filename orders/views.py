@@ -13,10 +13,12 @@ from producer_consumer.settings import NAME_CREATE_ORDERS_TASK
 
 class OrderListView(generic.ListView):
     model = Order
-    queryset = Order.objects.select_related("employee")
 
     def get_queryset(self):
-        return Order.objects.all().filter(employee=self.request.user)
+        queryset = Order.objects.select_related("employee").filter(
+            employee=self.request.user
+        )
+        return queryset
 
 
 class OrderDeleteView(generic.DeleteView):
