@@ -134,3 +134,13 @@ CELERY_RESULT_BACKEND = os.getenv("CELERY_RESULT_BACKEND")
 CELERY_TIMEZONE = "Europe/Kyiv"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
+
+NAME_CREATE_ORDERS_TASK = "add-order-every-5-seconds"
+
+CELERY_BEAT_SCHEDULE = {
+    NAME_CREATE_ORDERS_TASK: {
+        "task": "orders.tasks.create_order",
+        "schedule": 5.0,
+        "enabled": False,
+    },
+}
