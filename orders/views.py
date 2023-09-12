@@ -13,6 +13,7 @@ from producer_consumer.settings import NAME_CREATE_ORDERS_TASK
 
 class OrderListView(generic.ListView):
     model = Order
+    paginate_by = 5
 
     def get_queryset(self):
         queryset = Order.objects.select_related("employee").filter(

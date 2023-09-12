@@ -55,9 +55,18 @@ python manage.py runserver
 ```
 
 ### Run with docker
+Copy .env_sample -> .env and populate with all required data
 
 Docker should be installed
 
 ```commandline
 docker-compose up --build
 ```
+
+### Getting access
+1. Follow to the admin page and login `http://127.0.0.1:8000/admin/`
+- You can use following superuser:
+    - Login: `admin`
+    - Password: `admin`
+
+2. Follow this link to test the application `http://127.0.0.1:8000/orders/`
