@@ -16,10 +16,15 @@ Including another URLconf
 """
 from django.urls import path
 
+from orders import views
 from orders.views import OrderListView
 
 app_name = "orders"
 
 urlpatterns = [
     path("", OrderListView.as_view(), name="order-list"),
+    path("activate-orders/", views.activation_create_orders, name="activate-orders"),
+    path(
+        "deactivate-orders/", views.deactivation_create_orders, name="deactivate-orders"
+    ),
 ]
