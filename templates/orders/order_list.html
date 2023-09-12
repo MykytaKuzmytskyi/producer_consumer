@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<form method="POST" action="{% url 'orders:activate-orders' %}">
+  {% csrf_token %}
+  <button type="submit">Activate orders</button>
+</form>
+
+<form method="POST" action="{% url 'orders:deactivate-orders' %}">
+  {% csrf_token %}
+  <button type="submit">deactivate orders</button>
+</form>
+
+{% if order_list %}
+
+<div class="table-responsive bg-white">
+  <table class="table mb-0">
+    <thead>
+    <tr>
+      <th scope="col">EMPLOYEES</th>
+      <th scope="col">POSITION</th>
+      <th scope="col">CONTACTS</th>
+      <th scope="col">NAME</th>
+      <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    {% for order in order_list %}
+    <tbody>
+    <tr>
+      <th scope="row" style="color: #666666;">{{ order.employee.username }}</th>
+      <td>{{ order.employee.position }}</td>
+      <td>{{ order.employee.email }}</td>
+      <td>{{ order.name }}</td>
+      <td>
+        <a href="{% url 'orders:delete' pk=order.pk %}"><button class="button button2">Delete</button></a>
+      </td>
+    </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+
+{% else %}
+<p>There are no posts</p>
+{% endif %}
+
+{% endblock %}
