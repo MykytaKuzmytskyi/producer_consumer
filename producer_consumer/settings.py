@@ -148,3 +148,6 @@ CELERY_BEAT_SCHEDULE = {
         "enabled": False,
     },
 }
+
+SHAT_ID = os.getenv("CHAT_ID")
+TOKEN = os.getenv("TELEGRAM_TOKEN")
