@@ -1,0 +1,62 @@
+[
+  {
+    "model": "orders.employee",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$cmC8gZqA9K4DXj8P1DKp10$4/vZGZrdkOvSwwvXGNqkm1JqlHQg4o3lo/U3MKlFTTs=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-10T19:07:01.060Z",
+      "probation": null,
+      "position": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "orders.employee",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$cmC8gZqA9K4DXj8P1DKp10$4/vZGZrdkOvSwwvXGNqkm1JqlHQg4o3lo/U3MKlFTTs=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "franco",
+      "first_name": "Ivan",
+      "last_name": "Franco",
+      "email": "franc@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-10T19:07:01.060Z",
+      "probation": null,
+      "position": "Java Developer",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "orders.employee",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$cmC8gZqA9K4DXj8P1DKp10$4/vZGZrdkOvSwwvXGNqkm1JqlHQg4o3lo/U3MKlFTTs=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sheva",
+      "first_name": "Dmytro",
+      "last_name": "Shevchenco",
+      "email": "shea@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-10T19:07:01.060Z",
+      "probation": null,
+      "position": "JS Developer",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

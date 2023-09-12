@@ -7,7 +7,7 @@ import orders
 
 
 def load_fixture(apps, schema_editor):
-    call_command("loaddata", "fix.json", app_label="orders")
+    call_command("loaddata", "fixture_users.json", app_label="orders")
 
 
 def reverse_func(apps, schema_editor):
