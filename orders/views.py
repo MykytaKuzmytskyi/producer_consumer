@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 from django_celery_beat.models import PeriodicTask
 
@@ -13,6 +13,11 @@ class OrderListView(generic.ListView):
 
     def get_queryset(self):
         return Order.objects.all().filter(employee=self.request.user)
+
+
+class OrderDeleteView(generic.DeleteView):
+    model = Order
+    success_url = reverse_lazy("orders:order-list")
 
 
 def activation_create_orders(request):

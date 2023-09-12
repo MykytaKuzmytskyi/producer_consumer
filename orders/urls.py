@@ -23,6 +23,7 @@ app_name = "orders"
 
 urlpatterns = [
     path("", OrderListView.as_view(), name="order-list"),
+    path("delete/<int:pk>/", OrderDeleteView.as_view(), name="delete"),
     path("activate-orders/", views.activation_create_orders, name="activate-orders"),
     path(
         "deactivate-orders/", views.deactivation_create_orders, name="deactivate-orders"
