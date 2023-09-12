@@ -17,7 +17,7 @@ Including another URLconf
 from django.urls import path
 
 from orders import views
-from orders.views import OrderListView
+from orders.views import OrderListView, OrderDeleteView
 
 app_name = "orders"
 
